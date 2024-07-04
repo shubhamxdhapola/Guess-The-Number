@@ -1,29 +1,26 @@
-This Python script is an interactive Number Guessing Game that challenges users to guess a randomly generated number within a specified range. 
-The game provides a fun way for users to test their guessing skills and gives feedback on each guess, including the number of attempts remaining. 
-It also allows users to play multiple rounds if they wish.
+This Python script implements an interactive number guessing game where users specify a range and attempt to guess a randomly generated number within that range. The game follows these key steps:
 
-#Key Features:
-Game Introduction:
+1. **Initialization**: 
+   - The game starts by defining a constant line `LINE` for formatting output.
+   
+2. **Range Specification**:
+   - The function `get_specified_range()` prompts the user to input the starting and ending range of numbers. It includes error handling to ensure the inputs are valid integers.
 
-The script starts by displaying a welcome message and brief instructions on how to play the game.
-It prompts the user to enter the starting and ending range for the random number.
-Random Number Generation:
+3. **User Input**:
+   - The function `get_user_input()` prompts the user to guess the number and ensures that the input is a valid integer.
 
-Using the random.randint() function, the script generates a random number within the specified range.
-Gameplay Loop:
+4. **Game Play**:
+   - The function `play_game()` generates a random number within the specified range. The user has 10 attempts to guess the correct number.
+   - After each guess, the game provides feedback indicating whether the guessed number is higher or lower than the target number.
+   - The game keeps track of the number of attempts and displays the remaining attempts after each guess.
+   - If the user guesses correctly within the allowed attempts, a congratulatory message is displayed along with the number of attempts taken, the score, and the accuracy percentage.
+   - If the user fails to guess the number within 10 attempts, the game reveals the correct number and displays a "Game Over" message.
 
-The player has 10 attempts to guess the number.
-For each guess, the script provides feedback indicating whether the guessed number is too high or too low.
-The number of remaining attempts is displayed after each guess.
-Win/Lose Conditions:
+5. **Game Loop**:
+   - The function `number_guessing_game()` introduces the game and explains the rules.
+   - It contains a loop that allows the user to play multiple rounds of the game. After each round, the user is asked if they want to play again. The game exits if the user chooses not to play another round.
 
-If the player guesses the correct number, a congratulatory message is displayed, and the game ends.
-If the player runs out of attempts without guessing the number, a game over message is shown along with the correct number.
-Scoring System:
+6. **Main Function**:
+   - The `if __name__ == "__main__":` block ensures that the game starts when the script is run directly.
 
-Upon winning, the script calculates and displays the number of attempts used, the score (remaining attempts out of 10), and the accuracy percentage.
-Play Again Option:
-
-After each game, the player is asked if they want to play again.
-If the player chooses to play again, the game restarts.
-If the player chooses not to play again, the game exits with a goodbye message.
+This script provides a user-friendly and engaging way to test and improve number guessing skills, with clear instructions and feedback at each step.
